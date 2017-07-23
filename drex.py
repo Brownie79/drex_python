@@ -30,10 +30,11 @@ qtumd-start="~/qtum/src/qtumd -regtest -server -rpcuser=root -rpcpassword=DREX"
 qc="~/qtum/src/qtum-cli -regtest -rpcuser=root -rpcpassword=DREX"
 
 
-def instantiate_chain:
-"""
-0. Delete old ~/.qtum/regtest if it exists
-"""
+def instantiate_chain():
+  
+  """
+  0. Delete old ~/.qtum/regtest if it exists
+  """
   subprocess.call("rm -rf ~/.qtum/regtest");
 
 """
@@ -59,7 +60,7 @@ def main():
   choice = raw_input("Enter an option: ")
   while(choice != "X"):
     if(choice == "A"):
-
+      instantiate_chain()
     elif(choice == "1"):
       return
     elif(choice == "2"):
