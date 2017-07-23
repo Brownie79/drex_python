@@ -1,0 +1,37 @@
+== Blockchain ==
+callcontract "address" "data" ( address )
+getblockcount
+listcontracts (start maxDisplay)
+
+== Generating ==
+generate nblocks ( maxtries )
+
+== Rawtransactions ==
+fromhexaddress "hexaddress"
+gethexaddress "address"
+getrawtransaction "txid" ( verbose )
+
+== Util ==
+signmessagewithprivkey "privkey" "message"
+validateaddress "address"
+verifymessage "address" "signature" "message"
+
+== Wallet ==
+abandontransaction "txid"
+createcontract "bytecode" (gaslimit gasprice "senderaddress" broadcast)
+dumpprivkey "address"
+getaccount "address"
+getaccountaddress "account"
+getaddressesbyaccount "account"
+getbalance ( "account" minconf include_watchonly )
+getnewaddress ( "account" )
+getreceivedbyaccount "account" ( minconf )
+getreceivedbyaddress "address" ( minconf )
+getwalletinfo
+listaccounts ( minconf include_watchonly)
+listtransactions ( "account" count skip include_watchonly)
+move "fromaccount" "toaccount" amount ( minconf "comment" )
+sendtoaddress "address" amount ( "comment" "comment_to" subtractfeefromamount )
+sendtocontract "contractaddress" "data" (amount gaslimit gasprice senderaddress broadcast)
+setaccount "address" "account"
+signmessage "address" "message"
