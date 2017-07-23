@@ -26,7 +26,7 @@ financier_options = """
 consumer_dict = {}
 provider_dict = {}
 financier_dict = {}
-qtumd-start="~/qtum/src/qtumd -regtest -server -rpcuser=root -rpcpassword=DREX"
+qtumd_start="~/qtum/src/qtumd -regtest -server -rpcuser=root -rpcpassword=DREX"
 qc="~/qtum/src/qtum-cli -regtest -rpcuser=root -rpcpassword=DREX"
 
 
