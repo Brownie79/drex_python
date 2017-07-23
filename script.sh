@@ -1,5 +1,9 @@
 # !/bin/bash
 
+export qtumd-start="~/qtum/src/qtumd -regtest -server -rpcuser=root -rpcpassword=DREX" 
+
+export qc="~/qtum/src/qtum-cli -regtest -rpcuser=root -rpcpassword=DREX"
+
 # #0. Delete Old Chain
 rm -rf ~/.qtum/regtest/
 
@@ -27,7 +31,7 @@ qc move "" "financier2" 10000
 
 #3. Deploy the Solar Tokens Contract
 ##a. deploy the smart contract
-qc createcontract $(cat ) 10000000 #ADMIN created contract
+qc createcontract $(cat solartoken.bytecode) 10000000 #ADMIN created contract
 
 
 ##b. give solar tokens to all the users
