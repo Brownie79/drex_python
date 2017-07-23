@@ -27,7 +27,7 @@ consumer_dict = {}
 provider_dict = {}
 financier_dict = {}
 qtumd_start="~/qtum/src/qtumd -regtest -server -rpcuser=root -rpcpassword=DREX"
-qc="~/qtum/src/qtum-cli -regtest -rpcuser=root -rpcpassword=DREX "
+qc="/root/qtum/src/qtum-cli -regtest -rpcuser=root -rpcpassword=DREX "
 
 
 def instantiate_chain():
