@@ -11,7 +11,7 @@ rm -rf ~/.qtum/regtest/
 ##Start Chain
 qtumd-start 
 ##Mine the first 550 blocks to get yourself Qtum
-qc generate 550
+$qc generate 550
 
 #2. Generate new addresses and transfer 10k qtum to each acc
 qc getnewaddress "consumer1"
@@ -31,7 +31,7 @@ qc move "" "financier2" 10000
 
 #3. Deploy the Solar Tokens Contract
 ##a. deploy the smart contract
-qc createcontract $(cat solartoken.bytecode) 10000000 #ADMIN created contract
+$qc createcontract $(cat solartoken.bytecode) 10000000 #ADMIN created contract
 
 
 ##b. give solar tokens to all the users
