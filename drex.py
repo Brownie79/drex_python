@@ -46,6 +46,7 @@ def instantiate_chain():
   cmd = qc + "listaccounts"
   subprocess.call(cmd)
 
+  """
   2. Accounts created and funded with QTUM
       qc getnewaddress "consumer1" ...
       //save them all as consumers = {"consumer#": "addr"} dict
