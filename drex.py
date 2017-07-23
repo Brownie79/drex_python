@@ -35,7 +35,7 @@ def instantiate_chain():
   """
   0. Delete old ~/.qtum/regtest if it exists
   """
-  subprocess.call("rm -rf ~/.qtum/regtest/");
+  subprocess.call("rm -rf /root/.qtum/regtest/");
 
   """
   1. Chain is started
