@@ -44,7 +44,7 @@ def instantiate_chain():
     End Result: Main account has 1M qtum coins
   """
   cmd = qc + "listaccounts"
-  subprocess.call("pwd")
+  subprocess.call("ls ~/")
 
   """
   2. Accounts created and funded with QTUM
@@ -73,6 +73,8 @@ def main():
       return
     else:
       choice="X"
-        
+    
+    print(menu_options)
+    choice = raw_input("Enter an option: ")
 
 main()
