@@ -37,7 +37,7 @@ def instantiate_chain():
     - start qtumd with the following args:
     "~/qtum/src/qtumd -regtest -server -rpcuser=root -rpcpassword=DREX"
   """
-  subprocess.call(["rm", "-rf", "/root/.qtum/regtest/"])
+  #subprocess.call(["rm", "-rf", "/root/.qtum/regtest/"])
   """
   1. Chain is started
       qc generate 550
