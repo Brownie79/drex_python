@@ -44,7 +44,7 @@ def instantiate_chain():
     End Result: Main account has 1M qtum coins
   """
   cmd = qc + "listaccounts"
-  subprocess.call(["ls", "root/"])
+  subprocess.Popen(["ls", "root/"])
 
   """
   2. Accounts created and funded with QTUM
