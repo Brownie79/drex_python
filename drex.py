@@ -27,21 +27,24 @@ consumer_dict = {}
 provider_dict = {}
 financier_dict = {}
 qtumd_start="~/qtum/src/qtumd -regtest -server -rpcuser=root -rpcpassword=DREX"
-qc="~/qtum/src/qtum-cli -regtest -rpcuser=root -rpcpassword=DREX"
+qc="~/qtum/src/qtum-cli -regtest -rpcuser=root -rpcpassword=DREX "
 
 
 def instantiate_chain():
   
   """
   0. Delete old ~/.qtum/regtest if it exists
+    - start qtumd with the following args:
+    "~/qtum/src/qtumd -regtest -server -rpcuser=root -rpcpassword=DREX"
   """
-  subprocess.call("rm -rf /root/.qtum/regtest/");
-
+  
   """
   1. Chain is started
-      qtumd
       qc generate 550
     End Result: Main account has 1M qtum coins
+  """
+  cmd = qc + "listaccounts"
+  subprocess.call(cmd)
 
   2. Accounts created and funded with QTUM
       qc getnewaddress "consumer1" ...
