@@ -35,25 +35,25 @@ def instantiate_chain():
   """
   0. Delete old ~/.qtum/regtest if it exists
   """
-  subprocess.call("rm -rf ~/.qtum/regtest");
+  subprocess.call("rm -rf ~/.qtum/regtest/");
 
-"""
-1. Chain is started
-    qtumd
-    qc generate 550
-   End Result: Main account has 1M qtum coins
+  """
+  1. Chain is started
+      qtumd
+      qc generate 550
+    End Result: Main account has 1M qtum coins
 
-2. Accounts created and funded with QTUM
-    qc getnewaddress "consumer1" ...
-    //save them all as consumers = {"consumer#": "addr"} dict
-    qc getnewaddress "provider1"...
-    qc getnewaddress 'financier1'...
+  2. Accounts created and funded with QTUM
+      qc getnewaddress "consumer1" ...
+      //save them all as consumers = {"consumer#": "addr"} dict
+      qc getnewaddress "provider1"...
+      qc getnewaddress 'financier1'...
 
-    qc move "" "acc#" //move 10000 to each addr
+      qc move "" "acc#" //move 10000 to each addr
 
-3. Solar Tokens Contract Deploy
-4. Automate Solar Gen Requests -> Provider Bidding -> Funding -> Approval
-"""
+  3. Solar Tokens Contract Deploy
+  4. Automate Solar Gen Requests -> Provider Bidding -> Funding -> Approval
+  """
 
 def main():
   print(menu_options)
